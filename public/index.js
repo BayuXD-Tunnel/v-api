@@ -733,7 +733,7 @@ const features = [
     description: "OrderKuota/createpayment",
     category: "ORDERKUOTA",
     endpoint: "../api/createpayment",
-    query: "apikey=KontolPremium&amount=1000&tcodeqr=tes"
+    query: "apikey=KontolPremium&amount=1000&codeqr=tes"
     },
     {
     name: "OrderKuota Check-Payment",
