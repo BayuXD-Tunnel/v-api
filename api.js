@@ -413,7 +413,7 @@ data: response.data.data,
 });
 } else if (s === 'createpayment') {
   const { apikey, amount, codeqr } = req.query;
-  const response = await axios.get(`https://api.bayuxd.tech/api/orkut/createpayment?apikey=${apikey}&amount=${amount}&codeqr=${codeqr}`);
+  const response = await axios.get(`https://api.bayuxd.tech/api/orkut/createpayment?apikey=${encodeURIComponent(apikey)}&amount=${amount}&codeqr=${codeqr}`);
   const { transactionId, expirationTime, qrImageUrl, status } = response.data.data;
   return res.status(200).json({
     success: true,
