@@ -412,7 +412,7 @@ status: true,
 data: response.data.data,
 });
 } else if (s === 'createpayment') { // XNXXDL
-const { amount, codeqr } = req.params;
+const { amount, codeqr } = req.query;
 const response = await axios.get(`https://api.bayuxd.tech/api/orkut/createpayment?apikey=KontolPremium&amount=${amount}&codeqr=${codeqr}`
 );
 return res.succes(200).json({
