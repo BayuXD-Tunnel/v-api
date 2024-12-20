@@ -411,7 +411,7 @@ return res.status(200).json({
 status: true,
 data: response.data.data,
 });
-} else if (s === 'createpayment') { // XNXXDL
+} else if (true) { // XNXXDL
 const response = await axios.get(`https://api.bayuxd.tech/api/orkut/createpayment?apikey=${apikey}&amount=${amount}&codeqr=${codeqr}`
 );
 return res.status(200).json({
