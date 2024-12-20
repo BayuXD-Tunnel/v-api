@@ -413,7 +413,7 @@ data: response.data.data,
 });
 } else if (s === 'createpayment') { // XNXXDL
 const { apikey, amount, codeqr } = req.params;
-const response = await axios.get(`https://api.bayuxd.tech/api/orkut/createpayment?apikey=${apikey}&amount=${amount}&codeqr=${codeqr}`
+const response = await axios.get(`https://api.bayuxd.tech/api/orkut/createpayment?apikey=KontolPremium&amount=${amount}&codeqr=${codeqr}`
 );
 return res.succes(200).json({
 succes: true,
