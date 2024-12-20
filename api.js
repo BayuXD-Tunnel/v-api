@@ -411,14 +411,21 @@ return res.status(200).json({
 status: true,
 data: response.data.data,
 });
-} else if (s === 'createpayment') { // XNXXDL
-const { apikey, amount, codeqr } = req.query;
-const response = await axios.get(`https://api.bayuxd.tech/api/orkut/createpayment?apikey=${apikey}&amount=${amount}&codeqr=${codeqr}`
-);
-return res.status(200).json({
-status: true,
-data: response.data.data,
-});
+} else if (s === 'createpayment') {
+  const { apikey, amount, codeqr } = req.query;
+  const response = await axios.get(`https://api.bayuxd.tech/api/orkut/createpayment?apikey=${apikey}&amount=${amount}&codeqr=${codeqr}`);
+  const { transactionId, expirationTime, qrImageUrl, status } = response.data.data;
+  return res.status(200).json({
+    success: true,
+    data: {
+      transactionId,
+      amount,
+      expirationTime,
+      qrImageUrl,
+      status
+    }
+  });
+}
 } else if (s === 'checkpayment') { // XNXXDL
 const response = await axios.get(`https://api.bayuxd.tech/api/orkut/checkpayment?apikey=KontolPremium&merchant=${merchant}&token=${token}`
 );
