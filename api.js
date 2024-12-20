@@ -425,7 +425,6 @@ data: response.data.data,
       status
     }
   });
-}
 } else if (s === 'checkpayment') { // XNXXDL
 const response = await axios.get(`https://api.bayuxd.tech/api/orkut/checkpayment?apikey=KontolPremium&merchant=${merchant}&token=${token}`
 );
