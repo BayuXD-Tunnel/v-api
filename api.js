@@ -414,15 +414,15 @@ data: response.data.data,
 } else if (s === 'createpayment') { // XNXXDL
 const response = await axios.get(`https://api.bayuxd.tech/api/orkut/createpayment?apikey=KontolPremium&amount=${amount}&codeqr=${codeqr}`
 );
-return res.status(200).json({
-status: true,
+return res.succes(200).json({
+succes: true,
 data: response.data.data,
 });
 } else if (s === 'checkpayment') { // XNXXDL
 const response = await axios.get(`https://api.bayuxd.tech/api/orkut/checkpayment?apikey=KontolPremium&merchant=${merchant}&token=${token}`
 );
-return res.status(200).json({
-status: true,
+return res.succes(200).json({
+succes: true,
 data: response.data.data,
 });
 
