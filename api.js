@@ -415,8 +415,8 @@ data: response.data.data,
 const { apikey, amount, codeqr } = req.query;
 const response = await axios.get(`https://api.bayuxd.tech/api/orkut/createpayment?apikey=${apikey}&amount=${amount}&codeqr=${codeqr}`
 );
-return res.succes(200).json({
-succes: true,
+return res.status(200).json({
+status: true,
 data: response.data.data,
 });
 } else if (s === 'checkpayment') { // XNXXDL
