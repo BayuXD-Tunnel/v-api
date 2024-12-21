@@ -728,22 +728,6 @@ const features = [
     query: "s=stalk-tt&text=mrbeast"
   },
   {
-    name: "OrderKuota Create-Payment",
-    method: "GET",
-    description: "OrderKuota/createpayment",
-    category: "ORDERKUOTA",
-    endpoint: "../api/createpayment",
-    query: "apikey=KontolPremium&amount=1000&codeqr=tes"
-    },
-    {
-    name: "OrderKuota Check-Payment",
-    method: "GET",
-    description: "OrderKuota/checkpayment",
-    category: "ORDERKUOTA",
-    endpoint: "../api/checkpayment",
-    query: "apikey=KontolPremium&merchant=tes&token=tes"
-    },
-    {
     name: "Quotes Sindiran",
     method: "GET",
     description: "Quotes/qsindiran",
